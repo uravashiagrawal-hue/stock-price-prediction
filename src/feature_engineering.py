@@ -80,8 +80,8 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
 if __name__ == "__main__":
     from preprocessing import load_and_clean
 
-    df = load_and_clean("../data/raw/AAPL.csv")
+    df = load_and_clean("data/raw/AAPL.csv")
     df = build_features(df)
     df = df.dropna().reset_index(drop=True)
-    df.to_csv("../data/processed/processed_stock.csv", index=False)
-    print(f"Processed dataset: {df.shape} -> ../data/processed/processed_stock.csv")
+    df.to_csv("data/processed/processed_stock.csv", index=False)
+    print(f"Processed dataset: {df.shape} -> data/processed/processed_stock.csv")

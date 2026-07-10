@@ -36,3 +36,9 @@ def scale_features(X_train, X_test, save_path: str = "../models/feature_scaler.j
     X_test_scaled = scaler.transform(X_test)
     joblib.dump(scaler, save_path)
     return X_train_scaled, X_test_scaled, scaler
+
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+RAW_DATA = PROJECT_ROOT / "data" / "raw" / "AAPL.csv"
