@@ -30,7 +30,7 @@ def time_based_split(df: pd.DataFrame, target_col: str, feature_cols: list, spli
     return X_train, X_test, y_train, y_test, train_df, test_df
 
 
-def scale_features(X_train, X_test, save_path: str = "../models/feature_scaler.joblib"):
+def scale_features(X_train, X_test, save_path: str = "models/feature_scaler.joblib"):
     scaler = MinMaxScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
